@@ -1,5 +1,3 @@
 .idea
-.iml*
-.iml
-E-commercial backend.iml
+*.iml
 out/

@@ -1,6 +1,4 @@
-package modal;
-
-import modal.Product;
+package model;
 
 public class CartItem {
 

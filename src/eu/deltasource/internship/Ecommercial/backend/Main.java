@@ -1,8 +1,8 @@
 package eu.deltasource.internship.Ecommercial.backend;
 
-import modal.Cart;
-import modal.CartItem;
-import modal.Product;
+import model.Cart;
+import model.CartItem;
+import model.Product;
 
 public class Main {
 

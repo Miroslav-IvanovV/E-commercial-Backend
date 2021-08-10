@@ -1,16 +1,12 @@
-package modal;
+package model;
 
 import java.util.ArrayList;
 
 public class Cart {
 
     private final static double TAX_PERCENTAGE = 0.20;
-    private ArrayList<CartItem> cartItems;
+    private ArrayList<CartItem> cartItems = new ArrayList<>();
     private double deliveryFee;
-
-    public Cart() {
-        this.cartItems = new ArrayList<>();
-    }
 
     @Override
     public String toString() {
@@ -44,13 +40,13 @@ public class Cart {
         if (itemPrice < 100) {
             deliveryFee = 10;
             return itemPrice + deliveryFee;
-        } else if (itemPrice < 200) {
+        }
+        if (itemPrice < 200) {
             deliveryFee = 5;
             return itemPrice + deliveryFee;
-        } else {
-            deliveryFee = 0;
-            return itemPrice + deliveryFee;
         }
+        deliveryFee = 0;
+        return itemPrice + deliveryFee;
     }
 
     /**
@@ -69,7 +65,7 @@ public class Cart {
      */
     public void removeItem(String itemLabel) {
         for (int i = 0; i < cartItems.size(); i++) {
-            if (cartItems.get(i).getProduct().getLabel() == itemLabel) {
+            if (cartItems.get(i).getProduct().getLabel().equals(itemLabel)) {
                 cartItems.remove(i);
             }
         }
